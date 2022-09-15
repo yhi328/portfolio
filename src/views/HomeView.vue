@@ -24,7 +24,7 @@
        
         <v-flex xs4 class="pa-2" data-aos="fade-right">
           <v-responsive :aspect-ratio="1/1">
-            <img src="image/top1.jpg" class="image">
+            <img src="/portfolio/image/top1.jpg" class="image">
           </v-responsive>
         </v-flex>
         <v-flex xs4 class="pa-2" data-aos="fade-down" data-aos-delay="100">
