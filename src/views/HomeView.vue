@@ -1,17 +1,17 @@
 <template>
   <div>
     <swiper :options="swiperOption" class="swiper">
-      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image:url(/image/top1.jpg);">
+      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image:url(image/top1.jpg);">
        <v-layout data-aos="fade-up" data-aos-duration="1000" fill-height align-center justify-center>
         <div class="slog">명지전문대학 윤혜인</div>
        </v-layout>
       </swiper-slide>
-      <swiper-slide class="slide" style="background-image:url(/image/top2.jpg);">
+      <swiper-slide class="slide" style="background-image:url(image/top2.jpg);">
         <v-layout fill-height align-center justify-center>
         <div class="slog">준비된 인재</div>
        </v-layout>
       </swiper-slide>
-      <swiper-slide class="slide" style="background-image:url(/image/top3.jpg);">
+      <swiper-slide class="slide" style="background-image:url(image/top3.jpg);">
         <v-layout fill-height align-center justify-center>
         <div class="slog">아자아자^._.^</div>
        </v-layout>
@@ -24,7 +24,7 @@
        
         <v-flex xs4 class="pa-2" data-aos="fade-right">
           <v-responsive :aspect-ratio="1/1">
-            <img src="image/top1.jpg" class="image">
+            <img src="/portfolio/image/top1.jpg" class="image">
           </v-responsive>
         </v-flex>
         <v-flex xs4 class="pa-2" data-aos="fade-down" data-aos-delay="100">
