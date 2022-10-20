@@ -134,7 +134,7 @@
 
         <v-layout row>
           <div class="subheading">Design</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/illustrator.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/Illustrator.png" aspect-ratio="1"></v-img>
           <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/photoshop.png" aspect-ratio="1"></v-img>
           <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/aftereffects.png" aspect-ratio="1"></v-img>
           <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/premierepro.png" aspect-ratio="1"></v-img>
