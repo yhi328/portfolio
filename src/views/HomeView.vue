@@ -1,14 +1,16 @@
 <template>
   <div>
     <v-container>
-      <hr>
-    <hr>
-    <TextAnime2 v-if="anime2"/>
-    <p>안녕하세요. 남들과는 다른 새로운 것을 추구하는 예비 개발자 윤혜인입니다.</p>
+      <hr><hr>
+      <div class="MainTitle">
+      <v-container>
+      <v-row>
+      <TextAnime3 :autoplay="autoplay"/> <div>개발자</div></v-row></v-container></div>
+    <br>안녕하세요. 남들과는 다른 새로운 것을 추구하는 예비 개발자 윤혜인입니다.
+    <br>틀에 박힌 사고를 항상 경계하고 새로운 방향으로 나아가려 합니다.
+    <br>다양한 아이디어 경진대회 경험으로 신선한 사고를 위해 노력해왔습니다.
     <hr><hr>
     </v-container>
-    
-    <TextAnime3 :autoplay="autoplay"/>
 
     <!--
     <swiper :options="swiperOption" class="swiper">
@@ -29,6 +31,8 @@
       </swiper-slide>
     </swiper>
 -->
+
+<TextAnime2 v-if="anime2"/>
 
 <!-- 자격증 -->
 <v-container>
@@ -86,8 +90,11 @@
     <div class="section">
       <div id="sec1" data-aos="fade">
         <div class="header">Awards</div>
-</div>
-      <div class="header">프로젝트 목록</div>
+      </div>
+      <!--
+      <div class="header">프로젝트 목록</div>-->
+
+      <!--
       <v-layout wrap>
        
         <v-flex xs4 class="pa-2" data-aos="fade-right">
@@ -121,6 +128,7 @@
           </v-responsive>
         </v-flex>
       </v-layout>
+      -->
     </div>
 
     <v-divider></v-divider>
@@ -154,7 +162,17 @@
     <v-divider></v-divider>
   
   </v-card>
+
   <v-divider></v-divider>
+
+  <!-- 스크롤위치 -->
+  <div id="foo" v-on:click="select($event)"></div>
+    <!-- fade, zoom -->
+    <div class="section">
+      <div id="sec1" data-aos="fade">
+        <div class="header">Awards</div>
+      </div>
+      </div>
     <!-- 수상내역 timeline -->
     <v-container style="max-width: 600px;">
     <v-timeline dense clipped>
@@ -309,7 +327,7 @@
 <!-- 푸터 -->
 <v-parallax
     dark
-    src="image/top2.jpg"
+    src = "image/footer.jpg"
   >
     <v-layout
       align-center
@@ -348,15 +366,21 @@ import TextAnime3 from './TextAnime3'
         data: () => ({
       rating: 3
     }),
+  
 
-        // 스크롤 위치
-        methods: {
-        select: function(bar, event) {
-            // use bar...
-            const targetId = event.currentTarget.id;
-            console.log(targetId); // returns 'foo'
-        }
-    },
+    //스크롤
+    method: {
+
+    handleScroll(e){
+      this.scrollPosition = e.target.scrollTop;
+
+    if(this.scrollPosition > 100){
+      console.log("UP")
+  } else {
+    console.log("DOWN")
+  }
+}
+},
 
       // 텍스트 애니메이션
         anime2: true,
@@ -472,4 +496,10 @@ import TextAnime3 from './TextAnime3'
 .flipme {
   transform: rotateY(180deg);
 }
+  .MainTitle {
+    display: inline-block;
+    min-width: 0.3em;
+    font-size: 2rem;
+    animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+  }
 </style>

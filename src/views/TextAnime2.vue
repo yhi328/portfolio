@@ -14,7 +14,7 @@
   export default {
     data() {
       return {
-        text: '남들과는 다른'
+        text: "개발자 윤혜인"
       }
     }
   }
