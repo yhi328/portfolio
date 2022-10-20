@@ -1,44 +1,67 @@
 <template>
   <div>
     <v-container>
-      <hr><hr>
-      <div class="MainTitle">
-      <v-container>
-      <v-row>
-      <TextAnime3 :autoplay="autoplay"/> <div>개발자</div></v-row></v-container></div>
-    <br>안녕하세요. 남들과는 다른 새로운 것을 추구하는 예비 개발자 윤혜인입니다.
+      <v-parallax
+    dark
+    src = "/portfolio/image/head.jpg"
+  >
+    <v-layout
+      align-center
+      column
+      justify-center
+    >  <hr><hr>
+    <div class="MainTitle">
+      <h1 class="display-2 font-weight-thin mb-3"><TextAnime3 :autoplay="autoplay"/></h1></div>
+      <h4 class="subheading"><br>안녕하세요. 남들과는 다른 새로운 것을 추구하는 윤혜인입니다.
     <br>틀에 박힌 사고를 항상 경계하고 새로운 방향으로 나아가려 합니다.
     <br>다양한 아이디어 경진대회 경험으로 신선한 사고를 위해 노력해왔습니다.
+    <br>이제는 그 경험을 세상에 펼칠 시간인 거 같습니다.
+  </h4>
     <hr><hr>
+    </v-layout>
+  </v-parallax>
+    
     </v-container>
 
-    <!--
-    <swiper :options="swiperOption" class="swiper">
-      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image:url(image/top1.jpg);">
-       <v-layout data-aos="fade-up" data-aos-duration="1000" fill-height align-center justify-center>
-        <div class="slog">윤혜인</div>
-       </v-layout>
-      </swiper-slide>
-      <swiper-slide class="slide" style="background-image:url(image/top2.jpg);">
-        <v-layout fill-height align-center justify-center>
-        <div class="slog">준비된 인재</div>
-       </v-layout>
-      </swiper-slide>
-      <swiper-slide class="slide" style="background-image:url(image/top3.jpg);">
-        <v-layout fill-height align-center justify-center>
-        <div class="slog">아자아자^._.^</div>
-       </v-layout>
-      </swiper-slide>
-    </swiper>
--->
+    <v-divider></v-divider>
 
+<v-container>
+  <div class="section"></div>
+   <v-layout justify-space-around>
+    <v-flex xs5>
+    <v-img id="sec1" data-aos="zoom-in" src="image/mysql.png" aspect-ratio="1"></v-img>
+    </v-flex>
+    </v-layout>
+
+  <v-layout
+      align-center
+      column
+      justify-center
+    >
+   
 <TextAnime2 v-if="anime2"/>
+<TextAnime1 v-if="anime1"/>
+<div id="sec1" data-aos="fade">명지전문대학 정보통신공학과</div>
+<div id="sec1" data-aos="fade"> 전공심화 졸업예정</div><br>
+</v-layout>
+<div class="section"></div>
+</v-container>
+<v-divider></v-divider>
 
+    <!-- fade, zoom -->
+    <div class="section">
+      <div id="sec1" data-aos="fade">
+        <div class="header">Certificate</div>
+      </div>
+      </div>
 <!-- 자격증 -->
 <v-container>
+  <v-layout
+      align-center
+      column
+      justify-center
+    >
   <v-row>
-<div>
-  <p>Certificate</p></div>
     <div class="scene scene--card" data-aos="fade-right">
       <div
         class="card" 
@@ -81,54 +104,9 @@
       </div>
     </div>
   </v-row>
+  </v-layout>
+  <div class="section"></div>
 </v-container>
-
-    <v-divider></v-divider>
-
-    <!-- fade, zoom -->
-    <div class="section">
-      <div id="sec1" data-aos="fade">
-        <div class="header">Awards</div>
-      </div>
-      <!--
-      <div class="header">프로젝트 목록</div>-->
-
-      <!--
-      <v-layout wrap>
-       
-        <v-flex xs4 class="pa-2" data-aos="fade-right">
-          <v-responsive :aspect-ratio="1/1">
-            <img src="/portfolio/image/top1.jpg" class="image">
-          </v-responsive>
-        </v-flex>
-        <v-flex xs4 class="pa-2" data-aos="fade-down" data-aos-delay="100">
-          <v-responsive :aspect-ratio="1/1">
-            <img src="image/top2.jpg" class="image">
-          </v-responsive>
-        </v-flex>
-        <v-flex xs4 class="pa-2" data-aos="fade-left" data-aos-delay="200">
-          <v-responsive :aspect-ratio="1/1">
-            <img src="image/top3.jpg" class="image">
-          </v-responsive>
-        </v-flex>
-        <v-flex xs4 class="pa-2" data-aos="fade-right">
-          <v-responsive :aspect-ratio="1/1">
-            <img src="image/top2.jpg" class="image">
-          </v-responsive>
-        </v-flex>
-        <v-flex xs4 class="pa-2">
-          <v-responsive :aspect-ratio="1/1" data-aos="fade-up"  data-aos-delay="100">
-            <img src="image/top3.jpg" class="image">
-          </v-responsive>
-        </v-flex>
-        <v-flex xs4 class="pa-2">
-          <v-responsive :aspect-ratio="1/1" data-aos="fade-left" data-aos-delay="200">
-            <img src="image/top1.jpg" class="image">
-          </v-responsive>
-        </v-flex>
-      </v-layout>
-      -->
-    </div>
 
     <v-divider></v-divider>
 
@@ -144,57 +122,29 @@
     <v-layout justify-space-around>
       <v-flex xs5>
         <v-layout row>
-          <div class="subheading">프로그래밍</div>
-          <v-img src="image/mysql.png" aspect-ratio="1"></v-img>
-          <v-img src="image/python.png" aspect-ratio="1"></v-img>
-          <v-img src="image/vuejs.png" aspect-ratio="1"></v-img>
-          <v-img src="image/arduino.png" aspect-ratio="1"></v-img>
-          <v-img src="image/vsc.png" aspect-ratio="1"></v-img>
+          <div class="subheading">Program</div>&nbsp;&nbsp;
+          <v-img id="sec1" data-aos="zoom-in-up" src="image/mysql.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="image/python.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="image/vsc.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="image/arduino.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="image/vuejs.png" aspect-ratio="1"></v-img>
         </v-layout>
+
         <v-layout row>
-          <div class="subheading">프로그래밍</div>
-          <v-img src="image/illustrator.png" aspect-ratio="1"></v-img>
-          <v-img src="image/photoshop.png" aspect-ratio="1"></v-img>
-          <v-img src="image/aftereffects.png" aspect-ratio="1"></v-img>
-          <v-img src="image/premierepro.png" aspect-ratio="1"></v-img>
-          <v-img src="image/cinema.jpg" aspect-ratio="1"></v-img>
+          <div class="subheading">Design</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <v-img id="sec1" data-aos="zoom-in-down" src="image/illustrator.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="image/photoshop.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="image/aftereffects.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="image/premierepro.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="image/cinema.jpg" aspect-ratio="1"></v-img>
         </v-layout>
       </v-flex>
     </v-layout>
+    <div class="section"></div>
   </v-container>
 
 </v-container>
     
-    <!--
-    <v-card
-    class="elevation-16 mx-auto"
-    width="100"
-    height="100"
-  >
-    <v-card-title
-      class="headline"
-      primary-title
-    >
-      파이썬
-      
-    </v-card-title>
-    <v-card-text>
-      Python
-      <div class="text-xs-center mt-5">
-        <v-rating
-          v-model="rating"
-          color="yellow darken-3"
-          background-color="grey darken-1"
-          empty-icon="$vuetify.icons.ratingFull"
-          half-increments
-          hover
-        ></v-rating>
-      </div>
-    </v-card-text>  </v-card>
-  -->
-    <v-divider></v-divider>
-  
-
 
   <v-divider></v-divider>
 
@@ -210,11 +160,11 @@
       <v-timeline-item
         fill-dot
         class="white--text mb-5"
-        color="orange"
+        color="#e9967a"
         large
       >
         <template v-slot:icon>
-          <span>Awards</span>
+          <span><v-icon color=white>mdi-license </v-icon></span>
         </template>
         </v-timeline-item>
       <v-slide-x-transition
@@ -236,8 +186,8 @@
 
       <v-timeline-item
         class="mb-3"
-        color="grey"
-        icon-color="black"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
@@ -248,18 +198,12 @@
 
       <v-timeline-item
         class="mb-3"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
           <v-flex xs7>
-            <v-chip
-              class="white--text ml-0"
-              color="purple"
-              label
-              small
-            >
-              Special
-            </v-chip>
             2020년 캠퍼스 CEO 육성사업 스타트업 아이디어 경진대회 우수상
           </v-flex>
           <v-flex xs5 text-xs-right>2020.06.19</v-flex>
@@ -268,7 +212,8 @@
 
       <v-timeline-item
         class="mb-3"
-        color="grey"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
@@ -282,11 +227,20 @@
 
       <v-timeline-item
         class="mb-3"
-        color="grey"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
           <v-flex xs7>
+            <v-chip
+              class="white--text ml-0"
+              color="#FFA500"
+              label
+              small
+            >
+              Special
+            </v-chip>
             2020 여성발명왕 EXPO 동국대상
           </v-flex>
           <v-flex xs5 text-xs-right>2020.10.25</v-flex>
@@ -294,7 +248,9 @@
       </v-timeline-item>
 
       <v-timeline-item
-        color="grey"
+        class="mb-3"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
@@ -305,7 +261,9 @@
         </v-layout>
       </v-timeline-item>
       <v-timeline-item
-        color="grey"
+        class="mb-3"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
@@ -316,18 +274,30 @@
         </v-layout>
       </v-timeline-item>
       <v-timeline-item
-        color="grey"
+        class="mb-3"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
           <v-flex xs7>
+            <v-chip
+              class="white--text ml-0"
+              color="#FFA500"
+              label
+              small
+            >
+              1st
+            </v-chip>
             2021년 명지전문대학 정보통신공학과 학술제 금상 
           </v-flex>
           <v-flex xs5 text-xs-right>2021.12.17</v-flex>
         </v-layout>
       </v-timeline-item>
       <v-timeline-item
-        color="grey"
+        class="mb-3"
+        color="#FFDAB9"
+        icon-color="white"
         small
       >
         <v-layout justify-space-between>
@@ -338,6 +308,7 @@
         </v-layout>
       </v-timeline-item>
     </v-timeline>
+    <div class="section"></div>
   </v-container>
 
   <v-divider></v-divider>
@@ -371,21 +342,22 @@
        </v-layout>
       </swiper-slide>
     </swiper>
-  <v-card-title primary-title>
+  <v-card-title primary-title align-center>
           <div>
             <h3 class="headline mb-0">옆으로 넘겨보세요</h3>
-            <div> {{ card_text }} </div>
+            <div align-center> {{ card_text }} </div>
           </div>
         </v-card-title>
       </v-card>
 
   </v-layout>
-
+  <div class="section"></div>
 </v-container>
 
 <v-divider></v-divider>
 
 <!-- 푸터 -->
+<v-container>
 <v-parallax
     dark
     src = "/portfolio/image/footer.jpg"
@@ -399,6 +371,7 @@
       <h4 class="subheading">  <v-icon>mdi-email-outline </v-icon> yunhii328@gmail.com</h4>
     </v-layout>
   </v-parallax>
+</v-container>
   
   </div>
 </template>
@@ -409,6 +382,7 @@ import 'swiper/swiper-bundle.css'
 import AOS from "aos"
 import "aos/dist/aos.css";
 
+import TextAnime1 from './TextAnime1'
 import TextAnime2 from './TextAnime2'
 import TextAnime3 from './TextAnime3'
 
@@ -444,6 +418,7 @@ import TextAnime3 from './TextAnime3'
 },
 
       // 텍스트 애니메이션
+        anime1: true,
         anime2: true,
       autoplay: true,
       }
@@ -455,6 +430,7 @@ import TextAnime3 from './TextAnime3'
       Swiper,
       SwiperSlide,
 
+      TextAnime1,
       TextAnime2,
       TextAnime3,
     }
@@ -527,12 +503,12 @@ import TextAnime3 from './TextAnime3'
 }
 
 .card__face--front {
-  background:		#FFDAB9;
+  background:	#eebfac;
   font-size: initial;
 }
 
 .card__face--back {
-  background: 	#FFA07A;
+  background: #BC8F8F;
   transform: rotateY(180deg);
   font-size: initial;
 }
@@ -542,11 +518,11 @@ import TextAnime3 from './TextAnime3'
   transform: rotateY(180deg);
 }
   .MainTitle {
-    background-image: "/image/head.jpg";
     display: inline-block;
     min-width: 0.3em;
     font-size: 2rem;
     animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+    font-weight: light;
   }
 
   .headline {
