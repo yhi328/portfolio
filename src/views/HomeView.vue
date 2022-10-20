@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-container>
+      <div class="section"></div>
       <v-parallax
     dark
     src = "/portfolio/image/head.jpg"
@@ -28,10 +29,11 @@
 <v-container>
   <div class="section"></div>
    <v-layout justify-space-around>
-    <v-flex xs5>
-    <v-img id="sec1" data-aos="zoom-in" src="image/mysql.png" aspect-ratio="1"></v-img>
+    <v-flex xs1>
+    <v-img id="sec1" data-aos="zoom-in" src="/portfolio/image/profile.jpg" aspect-ratio="1"></v-img>
     </v-flex>
     </v-layout>
+    <br>
 
   <v-layout
       align-center
@@ -123,20 +125,20 @@
       <v-flex xs5>
         <v-layout row>
           <div class="subheading">Program</div>&nbsp;&nbsp;
-          <v-img id="sec1" data-aos="zoom-in-up" src="image/mysql.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-up" src="image/python.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-up" src="image/vsc.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-up" src="image/arduino.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-up" src="image/vuejs.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="/portfolio/image/mysql.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="/portfolio/image/python.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="/portfolio/image/vsc.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="/portfolio/image/arduino.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-up" src="/portfolio/image/vuejs.png" aspect-ratio="1"></v-img>
         </v-layout>
 
         <v-layout row>
           <div class="subheading">Design</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <v-img id="sec1" data-aos="zoom-in-down" src="image/illustrator.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-down" src="image/photoshop.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-down" src="image/aftereffects.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-down" src="image/premierepro.png" aspect-ratio="1"></v-img>
-          <v-img id="sec1" data-aos="zoom-in-down" src="image/cinema.jpg" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/illustrator.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/photoshop.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/aftereffects.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/premierepro.png" aspect-ratio="1"></v-img>
+          <v-img id="sec1" data-aos="zoom-in-down" src="/portfolio/image/cinema.jpg" aspect-ratio="1"></v-img>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -326,17 +328,17 @@
     
       <v-card>
 <swiper :options="swiperOption" class="swiper">
-      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image:url(image/project1_b.jpg);">
+      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image:url(/portfolio/image/project1_b.jpg);">
        <v-layout data-aos="fade-up" data-aos-duration="1000" fill-height align-center justify-center>
         <div class="slog">Pet Food Checking Program</div>
        </v-layout>
       </swiper-slide>
-      <swiper-slide class="slide" style="background-image:url(image/project2_b.jpg);">
+      <swiper-slide class="slide" style="background-image:url(/portfolio/image/project2_b.jpg);">
         <v-layout fill-height align-center justify-center>
         <div class="slog">방문자 발열체크 및 안심번호 팔찌 인식을 통한 개인정보 관리 시스템</div>
        </v-layout>
       </swiper-slide>
-      <swiper-slide class="slide" style="background-image:url(image/project3_b.jpg);">
+      <swiper-slide class="slide" style="background-image:url(/portfolio/image/project3_b.jpg);">
         <v-layout fill-height align-center justify-center>
         <div class="slog">Kakao Oven을 활용한 웹페이지 제작</div>
        </v-layout>
