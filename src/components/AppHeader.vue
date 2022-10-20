@@ -1,12 +1,12 @@
 <template>
+    <v-container>
     <div class="header">
         <v-layout align-center>
             <div class = "logo" @click="moveHome"> Yun Hye In's Portfolio</div>
             <v-spacer></v-spacer>
-            <v-btn @click=moveAbout>ABOUT</v-btn>
-            <v-btn @click=moveWork>WORK</v-btn>
         </v-layout>
         </div>
+        </v-container>
 </template>
 
 <script>
@@ -28,7 +28,13 @@
 <style scoped>
     .header{
         padding:20px;
-        box-shadow: 0 6px 6px #eee;
+        box-shadow: 0 3px 3px #eee;
+        position: fixed;
+        z-index: 100;
+        background: white;
+        left: 0;
+        right: 0;
+        top: 0;
     }
     .header .logo{
         font-size:20px;

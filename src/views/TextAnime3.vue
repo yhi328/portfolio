@@ -17,9 +17,9 @@
         index: 0,
         // 원본 메시지
         original: [
-          '참신한',
-          '신선한',
-          '새로운'
+          '"참신한"',
+          '"신선한"',
+          '"새로운"'
         ],
         // 분해한 메시지
         messages: [],
@@ -72,12 +72,12 @@
   <style scoped>
   .title {
     min-width: 0.3em;
-    font-size: 2rem;
+    font-size: 5rem;
   }
   .item {
     display: inline-block;
     min-width: 0.3em;
-    font-size: 2rem;
+    font-size: 5rem;
     animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
   }
   /* 트랜지션 전용 스타일 */
