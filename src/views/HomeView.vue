@@ -41,12 +41,13 @@
   <p>Certificate</p></div>
     <div class="scene scene--card" data-aos="fade-right">
       <div
-        class="card"
+        class="card" 
         @click="cardOne == 'start' ? (cardOne = 'flipped' ) : (cardOne = 'start' )"
         v-bind:class="{ flipme: cardOne == 'flipped' }"
       >
         <div class="card__face card__face--front">정보처리산업기사</div>
         <div class="card__face card__face--back">2021.11.26</div>
+        
       </div>
     </div>
     <div class="scene scene--card" data-aos="fade-up">
@@ -84,8 +85,6 @@
 
     <v-divider></v-divider>
 
-    <!-- 스크롤위치 -->
-    <div id="foo" v-on:click="select($event)"></div>
     <!-- fade, zoom -->
     <div class="section">
       <div id="sec1" data-aos="fade">
@@ -133,7 +132,40 @@
 
     <v-divider></v-divider>
 
+          <!-- fade, zoom -->
+          <div class="section">
+      <div id="sec1" data-aos="fade">
+        <div class="header">Skills</div>
+      </div>
+      </div>
+<v-container>
     <!-- 언어 -->
+    <v-container fluid>
+    <v-layout justify-space-around>
+      <v-flex xs5>
+        <v-layout row>
+          <div class="subheading">프로그래밍</div>
+          <v-img src="image/mysql.png" aspect-ratio="1"></v-img>
+          <v-img src="image/python.png" aspect-ratio="1"></v-img>
+          <v-img src="image/vuejs.png" aspect-ratio="1"></v-img>
+          <v-img src="image/arduino.png" aspect-ratio="1"></v-img>
+          <v-img src="image/vsc.png" aspect-ratio="1"></v-img>
+        </v-layout>
+        <v-layout row>
+          <div class="subheading">프로그래밍</div>
+          <v-img src="image/illustrator.png" aspect-ratio="1"></v-img>
+          <v-img src="image/photoshop.png" aspect-ratio="1"></v-img>
+          <v-img src="image/aftereffects.png" aspect-ratio="1"></v-img>
+          <v-img src="image/premierepro.png" aspect-ratio="1"></v-img>
+          <v-img src="image/cinema.jpg" aspect-ratio="1"></v-img>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+  </v-container>
+
+</v-container>
+    
+    <!--
     <v-card
     class="elevation-16 mx-auto"
     width="100"
@@ -144,6 +176,7 @@
       primary-title
     >
       파이썬
+      
     </v-card-title>
     <v-card-text>
       Python
@@ -157,16 +190,14 @@
           hover
         ></v-rating>
       </div>
-    </v-card-text>
-
+    </v-card-text>  </v-card>
+  -->
     <v-divider></v-divider>
   
-  </v-card>
+
 
   <v-divider></v-divider>
 
-  <!-- 스크롤위치 -->
-  <div id="foo" v-on:click="select($event)"></div>
     <!-- fade, zoom -->
     <div class="section">
       <div id="sec1" data-aos="fade">
@@ -311,15 +342,45 @@
 
   <v-divider></v-divider>
 
+  <div id="foo" v-on:click="select($event)"></div>
+    <!-- fade, zoom -->
+    <div class="section">
+      <div id="sec1" data-aos="fade">
+        <div class="header">Projects</div>
+      </div>
+      </div>
     <v-container>
-    <!-- 슬라이드 -->
-    <v-carousel>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel>
+    <!-- 프로젝트 -->
+    <v-layout>
+    
+      <v-card>
+<swiper :options="swiperOption" class="swiper">
+      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image:url(image/project1_b.jpg);">
+       <v-layout data-aos="fade-up" data-aos-duration="1000" fill-height align-center justify-center>
+        <div class="slog">Pet Food Checking Program</div>
+       </v-layout>
+      </swiper-slide>
+      <swiper-slide class="slide" style="background-image:url(image/project2_b.jpg);">
+        <v-layout fill-height align-center justify-center>
+        <div class="slog">방문자 발열체크 및 안심번호 팔찌 인식을 통한 개인정보 관리 시스템</div>
+       </v-layout>
+      </swiper-slide>
+      <swiper-slide class="slide" style="background-image:url(image/project3_b.jpg);">
+        <v-layout fill-height align-center justify-center>
+        <div class="slog">Kakao Oven을 활용한 웹페이지 제작</div>
+       </v-layout>
+      </swiper-slide>
+    </swiper>
+  <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">옆으로 넘겨보세요</h3>
+            <div> {{ card_text }} </div>
+          </div>
+        </v-card-title>
+      </v-card>
+
+  </v-layout>
+
 </v-container>
 
 <v-divider></v-divider>
@@ -327,7 +388,7 @@
 <!-- 푸터 -->
 <v-parallax
     dark
-    src = "image/footer.jpg"
+    src = "/portfolio/image/footer.jpg"
   >
     <v-layout
       align-center
@@ -385,22 +446,6 @@ import TextAnime3 from './TextAnime3'
       // 텍스트 애니메이션
         anime2: true,
       autoplay: true,
-
-        //슬라이드
-        items: [
-          {
-            src: "image/top2.jpg"
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-          }
-        ],
       }
     },
     mounted(){
@@ -423,9 +468,9 @@ import TextAnime3 from './TextAnime3'
       background-size:cover;
       background-position: center center;
       .slog{
-        font-size:60px;
+        font-size:40px;
         font-weight:bold;
-        color:white;
+        color:black;
       }
     }
   }
@@ -497,9 +542,17 @@ import TextAnime3 from './TextAnime3'
   transform: rotateY(180deg);
 }
   .MainTitle {
+    background-image: "/image/head.jpg";
     display: inline-block;
     min-width: 0.3em;
     font-size: 2rem;
     animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+  }
+
+  .headline {
+    font-size:30px;
+    font-weight:thin;
+    text-align: center;
+    box-align: center;
   }
 </style>
